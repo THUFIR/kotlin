@@ -1,0 +1,55 @@
+plugins {
+    id 'com.gradle.build-scan' version '1.8' 
+    //   id 'java'
+    id 'application'
+    id "org.jetbrains.kotlin.jvm" version "1.1.51"
+    id 'com.github.johnrengelman.shadow' version '2.0.1'
+}
+
+buildScan {
+    licenseAgreementUrl = 'https://gradle.com/terms-of-service'
+    licenseAgree = 'yes'
+    //publishAlways()
+}
+
+configurations {
+    provided
+}
+
+shadowJar {
+    baseName = 'kotlinAdder'
+    classifier = null
+    version = null
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = 'net.bounceme.dur.kotlin.App'
+
+repositories {
+    jcenter()
+}
+       
+configurations {
+    provided
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:1.1.51"
+    //    provided 'javax:javaee-api:7.0'
+    //    providedCompile 'javax:javaee-api:7.0'
+    //    compileOnly 'javax:javaee-api:7.0'
+    //    compile group: 'javax.json', name: 'javax.json-api', version: '1.1'
+    //    compile group: 'org.glassfish', name: 'javax.json', version: '1.0.4'
+    //    compile group: 'com.google.firebase', name: 'firebase-admin', version: '5.4.0'
+    //    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    //    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    //    compile group: 'com.google.oauth-client', name: 'google-oauth-client', version: '1.23.0'
+    //    compile 'com.google.api-client:google-api-client:1.23.0'
+    //    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    //    compile 'com.google.apis:google-api-services-calendar:v3-rev263-1.23.0'
+    //    compile 'com.google.cloud:google-cloud-firestore:0.25.0-beta'
+    //    compile 'com.google.gms:google-services:3.1.0'
+} 
+
