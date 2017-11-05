@@ -25,7 +25,8 @@ shadowJar {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-mainClassName = 'net.bounceme.dur.kotlin.App'
+//mainClassName = 'net.bounceme.dur.kotlin.App'
+mainClassName = 'demo.MainKt'
 
 repositories {
     jcenter()
